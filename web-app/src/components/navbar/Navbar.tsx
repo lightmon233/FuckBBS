@@ -156,21 +156,21 @@ const Navbar = () => {
       id="default-sidebar"
       className="top-0 left-0 z-40 w-64 h-full sm:translate-x-0"
     >
-      <div className="flex flex-col h-full px-3 py-4 overflow-y-auto ">
-        <div className="mb-4 rounded-lg cursor-pointer hover:bg-gray-700">
+      <div className="flex flex-col h-full px-4 py-5 overflow-y-auto bg-pink-100 bg-opacity-100 border-r border-pink-100 rounded-br-[200px]">
+        <div className="mb-6 rounded-lg cursor-pointer hover:bg-pink-100 transition duration-300 p-2">
           <Link to="/">
             <img src={Logo} alt="logo" />
           </Link>
         </div>
         {formOrLoggedInComponent()}
-        <ul className="pt-6 space-y-2 font-medium">
+        <ul className="pt-6 space-y-3 font-medium">
           {boardResponse?.map(({ id, name }) => (
             <li key={id}>
               <Link
-                className="flex items-center p-2 text-gray-200 rounded-lg cursor-pointer hover:bg-gray-700 hover:text-purple-300"
+                className="flex items-center p-3 text-purple-700 rounded-lg cursor-pointer hover:bg-pink-200 hover:text-purple-800 transition duration-300"
                 to={`/${name}`}
               >
-                <span className="flex-1 ml-2 text-xl font-medium whitespace-nowrap">
+                <span className="flex-1 ml-2 text-lg font-medium whitespace-nowrap">
                   {name}
                 </span>
               </Link>
@@ -180,6 +180,7 @@ const Navbar = () => {
       </div>
     </nav>
   );
+
 };
 
 export default Navbar;

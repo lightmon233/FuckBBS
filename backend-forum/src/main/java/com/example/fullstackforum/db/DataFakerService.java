@@ -144,9 +144,9 @@ public class DataFakerService {
             return;
         }
 
-        var board1 = Board.builder().name("Tietokoneet").description("Tietokoneet rulaa").build();
-        var board2 = Board.builder().name("Kissat").description("Miu may miu").build();
-        var board3 = Board.builder().name("Koirat").description("Wuf wuf wuf wuf").build();
+        var board1 = Board.builder().name("动漫").description("欢迎来到动漫天地！这里是所有动画、漫画爱好者的聚集地。").build();
+        var board2 = Board.builder().name("漫画").description("欢迎来到漫画区！这里是专属于漫画爱好者的天地。").build();
+        var board3 = Board.builder().name("游戏").description("欢迎来到游戏天地！无论你是主机党、PC党，还是手游达人，这里都是你的专属交流空间！").build();
 
         var boardList = Arrays.asList(board1, board2, board3);
         boardRepository.saveAll(boardList);
@@ -154,9 +154,9 @@ public class DataFakerService {
         var boardNames = boardList.stream().map(Board::getName).toList();
         log.info("Generated boards: {}", boardNames);
 
-        generateTopicsForBoard(board1, getRandomNumber(1, 10));
-        generateTopicsForBoard(board2, getRandomNumber(1, 10));
-        generateTopicsForBoard(board3, getRandomNumber(1, 10));
+        // generateTopicsForBoard(board1, getRandomNumber(1, 10));
+        // generateTopicsForBoard(board2, getRandomNumber(1, 10));
+        // generateTopicsForBoard(board3, getRandomNumber(1, 10));
 
         log.info("Initialized database with mock up data");
     }

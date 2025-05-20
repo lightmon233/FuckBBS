@@ -214,7 +214,7 @@ const SingleTopicPage = () => {
   return (
     <NavbarLayout>
       <div className="flex justify-center">
-        <div className="flex flex-col flex-grow max-w-screen-xl px-20 py-10 text-left rounded-lg bg-slate-800">
+        <div className="flex flex-col flex-grow max-w-screen-xl px-20 py-10 text-left rounded-lg bg-pink-50">
           <div
             id="topics-content"
             className="flex flex-col gap-5 text-left w-100 text-slate-900"

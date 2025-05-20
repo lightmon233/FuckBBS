@@ -1,6 +1,6 @@
 import { ToastContainer } from 'react-toastify';
 
-const backgroundColor = '#2b2b2b';
+const backgroundColor = '#fdf2f8';
 
 const CustomToastContainer = () => (
   <ToastContainer

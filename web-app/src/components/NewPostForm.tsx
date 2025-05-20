@@ -25,7 +25,7 @@ const NewPostForm = ({
     <form className="p-3 rounded-xl">
       {setHeading && (
         <input
-          className="w-1/2 p-2 my-2 overflow-hidden text-base text-gray-900 bg-gray-100 border-gray-300 rounded-lg resize-none ring-2 ring-slate-500"
+          className="w-1/2 p-2 my-2 overflow-hidden text-base text-gray-900 bg-pink-100 border-gray-300 rounded-lg resize-none ring-2 ring-slate-500"
           value={heading}
           type="text"
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -37,7 +37,7 @@ const NewPostForm = ({
       <div className="flex">
         <textarea
           rows={3}
-          className="w-full p-2 overflow-hidden text-base text-gray-900 bg-gray-100 border-gray-300 rounded-lg resize-none ring-2 ring-slate-500"
+          className="w-full p-2 overflow-hidden text-base text-gray-900 bg-pink-100 border-gray-300 rounded-lg resize-none ring-2 ring-slate-500"
           value={msg}
           onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
             setMsg(e.target.value)
@@ -47,7 +47,7 @@ const NewPostForm = ({
         <div className="flex flex-col w-1/12 gap-2 ml-2" id="post-toolbox">
           <button
             disabled
-            className="px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:text-slate-200"
+            className="px-3 py-2 text-sm font-medium text-center text-white bg-pink-200 rounded-lg hover:text-slate-200"
             onClick={imageClicked}
           >
             Image

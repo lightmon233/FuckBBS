@@ -16,7 +16,7 @@ const App = () => {
   }, [location, checkTokenExpiration]);
 
   return (
-    <div className="flex min-h-screen bg-gray-800">
+    <div className="flex min-h-screen bg-pink-50">
       <Navbar />
       <Outlet />
       <CustomToastContainer />
