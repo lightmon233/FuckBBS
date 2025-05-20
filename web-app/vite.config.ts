@@ -17,6 +17,14 @@ const config: ViteConfig = {
   preview: {
     port: 3000
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+      }
+    }
+  },
   build: {
     rollupOptions: {
       onwarn: (warning, warn) => {
