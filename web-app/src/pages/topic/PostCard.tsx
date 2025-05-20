@@ -23,14 +23,14 @@ type PostCardProps = {
   setSendPutRequest?: Dispatch<SetStateAction<boolean>>;
 };
 
-const voteIconColor = '#48A047';
-const deleteIconColor = '#b04231';
-const editIconColorEnabled = '#ffd966';
+const voteIconColor = '#ffffff';
+const deleteIconColor = '#ffffff';
+const editIconColorEnabled = '#ffffff';
 const editIconColorDisabled = '#747679';
 const iconSize = 30;
 const alignmentBaseline = 'baseline';
 
-const dateFormatForum = 'DD.MM.YYYY [klo] H:mm:ss';
+const dateFormatForum = 'MM.DD.YYYY H:mm:ss';
 
 const PostCard = ({
   postId,
@@ -50,7 +50,7 @@ const PostCard = ({
   const [showEditForm, setShowEditFrom] = useState(false);
 
   const bgColorOfTopicsFirstPost =
-    postId === undefined ? 'bg-slate-900' : 'bg-slate-700';
+    postId === undefined ? 'bg-pink-200' : 'bg-pink-100';
 
   const {
     authState: { userId: loggedInUserId, role }
@@ -103,7 +103,7 @@ const PostCard = ({
       className={`flex-grow p-4 text-white ${bgColorOfTopicsFirstPost}  rounded-xl`}
     >
       <section className="flex gap-5 p-1">
-        <p className="text-lg text-cyan-400">{user}</p>
+        <p className="text-lg text-cyan-600">{user}</p>
         <p className="text-lg text-slate-500">
           {formatDate(createdTime, dateFormatForum)}
         </p>
@@ -113,7 +113,7 @@ const PostCard = ({
             className="flex justify-end flex-grow gap-2"
           >
             {isUserAllowedInteractWithPost && (
-              <span className="flex self-center gap-2 px-2 py-1 rounded-xl bg-slate-600">
+              <span className="flex self-center gap-2 px-2 py-1 rounded-xl bg-pink-200">
                 <MdModeEdit
                   size={iconSize}
                   alignmentBaseline={alignmentBaseline}
@@ -131,7 +131,7 @@ const PostCard = ({
                 />
               </span>
             )}
-            <span className="flex gap-2 px-2 py-1 rounded-xl bg-slate-600">
+            <span className="flex gap-2 px-2 py-1 rounded-xl bg-pink-200">
               <MdThumbUp
                 size={iconSize}
                 color={voteIconColor}
@@ -139,12 +139,12 @@ const PostCard = ({
                 cursor="pointer"
                 onClick={() => sendVotePostRequest(postId)}
               />
-              <span className="text-2xl text-gray-300">
+              <span className="text-2xl text-white">
                 {votes === 0 ? '0' : `+${votes}`}
               </span>
             </span>
             {isUserAllowedInteractWithPost && (
-              <span className="flex self-center gap-2 px-2 py-1 rounded-xl bg-slate-600">
+              <span className="flex self-center gap-2 px-2 py-1 rounded-xl bg-red-500">
                 <MdDelete
                   size={iconSize}
                   alignmentBaseline={alignmentBaseline}
@@ -157,7 +157,7 @@ const PostCard = ({
           </div>
         )}
       </section>
-      <p className="mt-5 text-xl text-slate-300">{message}</p>
+      <p className="mt-5 text-xl text-gray-700">{message}</p>
       {shouldShowEditForm &&
         editMessage !== undefined &&
         setEditMessage !== undefined && (

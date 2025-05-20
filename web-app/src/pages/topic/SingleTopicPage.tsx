@@ -219,7 +219,7 @@ const SingleTopicPage = () => {
             id="topics-content"
             className="flex flex-col gap-5 text-left w-100 text-slate-900"
           >
-            <h1 className="font-sans text-3xl font-bold bg-slate text-slate-200">
+            <h1 className="font-sans text-3xl font-bold bg-slate text-cyan-600">
               {topicResponse?.header}
             </h1>
             <div className="pb-5" id="topic-first-post-container">

@@ -62,7 +62,7 @@ const TopicsPage = () => {
   if (!response?.topics.length) {
     return (
       <div className="flex flex-col justify-center flex-grow ">
-        <h1 className="self-center mb-10 text-2xl text-slate-200">
+        <h1 className="self-center mb-10 text-2xl text-cyan-400">
           No topics yet...
         </h1>
         {isLogged && (
@@ -83,10 +83,10 @@ const TopicsPage = () => {
       <div className="flex justify-center flex-grow">
         <div className="flex flex-col flex-grow max-w-screen-xl text-left w-100 text-slate-900">
           <header>
-            <h1 className="font-sans text-3xl font-bold text-slate-200">
+            <h1 className="font-sans text-3xl font-bold text-cyan-600">
               {response?.name}
             </h1>
-            <p className="font-serif text-xl text-slate-400">
+            <p className="font-serif text-xl text-cyan-400">
               {response?.adjective}
             </p>
           </header>
