@@ -17,6 +17,7 @@ public class TopicMapper {
                 .createdTime(topic.getCreatedTime())
                 .header(topic.getHeading())
                 .message(topic.getMessage())
+                .userId(topic.getUser().getId())
                 .build();
     }
 

@@ -127,6 +127,8 @@ const TopicsPage = () => {
     }
 
     putTopicRequest();
+    // 不加下面这句话，则编辑完topic后会连续弹出两到三次通知，暂时原因未知
+    setClickedEditedTopic(null);
   }, [clickedEditedTopic, putTopicRequest, sendPutRequest]);
 
   // Update topics after editing
