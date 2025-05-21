@@ -50,7 +50,7 @@ const SingleTopicPage = () => {
     payload: newPostPayload
   });
 
-  const { data: topicResponse } = useFetch<TopicWithPostsDto>(
+  const { data: topicResponse, loading } = useFetch<TopicWithPostsDto>(
     `${env.API_URL}/topics/${topicIdFromUrl}`
   );
 
@@ -209,7 +209,10 @@ const SingleTopicPage = () => {
   ]);
 
   // TODO: Handle no data situation
-  if (!topicResponse) return <div>oh noes</div>;
+
+  if (loading) return null;
+  
+  if (!topicResponse) return <div>oh no</div>;
 
   return (
     <NavbarLayout>
