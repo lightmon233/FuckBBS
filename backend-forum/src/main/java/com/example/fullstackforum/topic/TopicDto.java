@@ -10,6 +10,9 @@ public record TopicDto(
         String header,
         String message,
         String creator,
-        Date createdTime
+        Date createdTime,
+        Date updatedTime,
+        String user,
+        Integer userId
 ) {
 }

@@ -37,4 +37,6 @@ export type TopicDto = {
   message: string;
   creator: string;
   createdTime: Date;
+  user: string;
+  userId: number;
 };

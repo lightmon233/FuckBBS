@@ -130,6 +130,8 @@ const SingleTopicPage = () => {
     nullPutPostResponse();
   }, [putResponse, nullPutPostResponse]);
 
+  // 此段删掉就会导致singletopicpage只有topic没有下面的posts
+  // 因为topicResponse返回的是topicWithPosts
   // Render new posts if topic changes
   useEffect(() => {
     if (topicResponse) setPosts(topicResponse.posts);

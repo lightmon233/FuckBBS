@@ -113,7 +113,7 @@ const PostCard = ({
             className="flex justify-end flex-grow gap-2"
           >
             {isUserAllowedInteractWithPost && (
-              <span className="flex self-center gap-2 px-2 py-1 rounded-xl bg-pink-200">
+              <span className="flex self-center gap-2 px-2 py-1 rounded-xl bg-pink-300">
                 <MdModeEdit
                   size={iconSize}
                   alignmentBaseline={alignmentBaseline}
@@ -131,7 +131,7 @@ const PostCard = ({
                 />
               </span>
             )}
-            <span className="flex gap-2 px-2 py-1 rounded-xl bg-pink-200">
+            <span className="flex gap-2 px-2 py-1 rounded-xl bg-pink-300">
               <MdThumbUp
                 size={iconSize}
                 color={voteIconColor}

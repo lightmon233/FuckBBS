@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.Date;
 import java.util.List;
@@ -33,6 +34,13 @@ public class Topic {
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdTime;
+
+    @UpdateTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updatedTime;
+
+    @Column(nullable = false, columnDefinition = "boolean default false")
+    private boolean isDeleted;
 
     @ManyToOne()
     private Board board;

@@ -164,6 +164,18 @@ const Navbar = () => {
           </Link>
         </div>
         {formOrLoggedInComponent()}
+        {authState.role === 'ADMIN' && (
+          <div className="px-4">
+            <button 
+            className="px-4 py-2 mt-3 text-sm font-medium text-center text-white bg-blue-600 rounded-lg hover:text-slate-200 hover:bg-blue-700"
+            onClick={() => {
+              const host = window.location.hostname;
+              window.open(`http://${host}:5050`, '_blank');
+            }}>
+            数据库后台
+            </button>
+          </div>
+        )}
         </div>
         <ul className="pt-6 space-y-3 font-medium">
           {boardResponse?.map(({ id, name }) => (

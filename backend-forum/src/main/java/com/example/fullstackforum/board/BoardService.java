@@ -37,6 +37,12 @@ public class BoardService {
 
         var board = boardDb.get();
 
+        log.info("Filtering deleted topics");
+        var onlyNotDeletedTopics = board.getTopics().stream()
+                .filter(topic -> !topic.isDeleted())
+                .toList();
+
+        board.setTopics(onlyNotDeletedTopics);
         return boardMapper.mapBoardTopicsToBoardTopicsDto(board);
     }
 }
