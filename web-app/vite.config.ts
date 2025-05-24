@@ -23,7 +23,12 @@ const config: ViteConfig = {
         target: 'http://localhost:8080',
         changeOrigin: true,
       },
-    }
+    },
+    hmr: {
+      port: undefined,
+      overlay: false
+    },
+    host: '0.0.0.0',
   },
   build: {
     rollupOptions: {
